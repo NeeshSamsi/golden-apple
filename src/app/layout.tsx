@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${schibsted.variable} ${ssonder.variable} font-sans antialiased`}
+        className={`${schibsted.variable} ${ssonder.variable} text-primary font-sans antialiased`}
       >
         <Navbar />
         {children}
