@@ -12,7 +12,12 @@ const config: Config = {
       serif: ["var(--font-ssonder)", ...defaultTheme.fontFamily.serif],
       sans: ["var(--font-schibsted)", ...defaultTheme.fontFamily.sans],
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#22203A",
+        accent: "#F1A832",
+      },
+    },
   },
   plugins: [],
 }
