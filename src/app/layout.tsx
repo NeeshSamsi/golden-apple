@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Schibsted_Grotesk } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css"
+import Navbar from "@/components/Navbar"
 
 const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${schibsted.variable} ${ssonder.variable} antialiased`}>
+      <body
+        className={`${schibsted.variable} ${ssonder.variable} font-sans antialiased`}
+      >
+        <Navbar />
         {children}
       </body>
     </html>
