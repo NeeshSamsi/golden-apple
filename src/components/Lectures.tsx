@@ -28,7 +28,6 @@ export default function Lectures() {
                 trigger: lecture,
                 start: "top bottom-=40%",
                 toggleActions: "play none none reverse",
-                markers: true,
               },
             },
           )
@@ -39,7 +38,7 @@ export default function Lectures() {
 
   return (
     <div
-      className="col-span-12 grid grid-cols-subgrid gap-y-20"
+      className="col-span-12 grid grid-cols-subgrid gap-y-32"
       ref={container}
     >
       {[
@@ -72,7 +71,7 @@ export default function Lectures() {
       ].map(({ img, title, description }, i) => (
         <div key={i} className="col-span-12 grid grid-cols-subgrid">
           <div
-            className={`lecture col-span-4 grid gap-2 ${i % 2 === 0 ? "col-start-8 text-end" : "col-start-1"}`}
+            className={`lecture col-span-5 grid gap-2 ${i % 2 === 0 ? "col-start-7 text-end" : "col-start-1"}`}
           >
             <Image
               src={`/lectures/${img}`}
