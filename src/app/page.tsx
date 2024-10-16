@@ -2,11 +2,12 @@ import Image from "next/image"
 import hero1 from "@/../public/hero/hero-1.jpg"
 import hero2 from "@/../public/hero/hero-2.jpg"
 import paintings from "@/../public/carousel/paintings.jpg"
+import Lectures from "@/components/Lectures"
 
 export default function Home() {
   return (
-    <div>
-      <main className="grid grid-cols-12 gap-6 bg-white px-24 pb-24 pt-12 text-white bg-blend-difference">
+    <>
+      <main className="layout-grid bg-white px-24 pb-24 pt-12 text-white bg-blend-difference">
         <Image
           src={hero1}
           alt=""
@@ -32,7 +33,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className="bg-primary grid grid-cols-12 gap-6 p-24 text-white">
+      <section className="bg-primary layout-grid p-24 text-white">
         <div className="col-span-4 col-start-2 flex flex-col gap-4 font-serif">
           <p className="space-x-2">
             <span className="text-accent text-[18rem] leading-[0.7]">01</span>
@@ -56,7 +57,70 @@ export default function Home() {
           </p>
           <Image src={paintings} alt="Painting" className="rounded-md" />
         </div>
+
+        <div className="col-span-12 col-start-1 mt-8 flex items-center justify-center gap-8">
+          <div className="bg-accent h-1 w-20 rounded-full" />
+          <div className="h-1 w-20 rounded-full bg-white" />
+          <div className="h-1 w-20 rounded-full bg-white" />
+        </div>
       </section>
-    </div>
+
+      <section className="text-primary layout-grid space-y-16 bg-white p-24">
+        <h2 className="col-span-12 text-center font-serif text-8xl leading-none">
+          Lectures
+        </h2>
+
+        <div className="col-span-12 flex items-center gap-2 font-serif">
+          <p className="flex items-start">
+            <span className="text-7xl">19</span>
+            <sup className="text-3xl">th</sup>
+          </p>
+
+          <div className="grid flex-grow items-center">
+            <div className="flex justify-evenly">
+              {[
+                { date: "24", name: "Mary Beard", time: "12:00 - 13:00" },
+                { date: "26", name: "Emily Wilson", time: "13:05 - 14:05" },
+              ].map(({ date, name, time }, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div className="bg-primary h-full w-px" />
+                  <p className="text-4xl">{date}</p>
+                  <div className="font-sans text-xs">
+                    <p className="font-semibold">{name}</p>
+                    <p>{time}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-primary h-px w-full" />
+
+            <div className="flex justify-evenly">
+              {[
+                { date: "22", name: "Edith Hall", time: "11:00 - 12:00" },
+                { date: "25", name: "Robin Lane Fox", time: "12:35 - 13:35" },
+                { date: "29", name: "Gregory Nagy", time: "13:50 - 14:50" },
+              ].map(({ date, name, time }, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div className="bg-primary h-full w-px" />
+                  <p className="text-4xl">{date}</p>
+                  <div className="font-sans text-xs">
+                    <p className="font-semibold">{name}</p>
+                    <p>{time}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="flex items-start">
+            <span className="text-7xl">30</span>
+            <sup className="text-3xl">th</sup>
+          </p>
+        </div>
+
+        <Lectures />
+      </section>
+    </>
   )
 }
