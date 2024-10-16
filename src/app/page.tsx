@@ -18,25 +18,25 @@ export default function Home() {
           alt=""
           className="col-span-5 col-start-8 row-start-1 self-end rounded-md"
         />
-        <h1 className="col-span-10 col-start-2 row-start-1 mb-48 mt-12 text-center font-serif text-8xl text-white mix-blend-difference">
+        <h1 className="heading-1 col-span-10 col-start-2 row-start-1 mb-48 mt-12 text-center font-serif text-8xl text-white mix-blend-difference">
           Discover the Timeless Allure of the Golden Apple
         </h1>
-        <div className="text-primary col-span-5 col-start-1 row-start-1 grid gap-4 self-end">
+        <div className="col-span-5 col-start-1 row-start-1 grid gap-4 self-end text-primary">
           <p className="font-medium">
             Explore how the legendary golden apple, a symbol of beauty, desire,
             and conflict in Greek mythology, has inspired masterpieces in
             painting, poetry, and sculpture throughout the ages.
           </p>
-          <button className="bg-accent text-primary w-fit rounded-md px-4 py-2 font-semibold">
+          <button className="w-fit rounded-md bg-accent px-4 py-2 font-semibold text-primary">
             Book tickets
           </button>
         </div>
       </main>
 
-      <section className="bg-primary layout-grid p-24 text-white">
+      <section className="layout-grid bg-primary p-24 text-white">
         <div className="col-span-4 col-start-2 flex flex-col gap-4 font-serif">
           <p className="space-x-2">
-            <span className="text-accent text-[18rem] leading-[0.7]">01</span>
+            <span className="text-[18rem] leading-[0.7] text-accent">01</span>
             <span className="text-7xl">/03</span>
           </p>
           <h2 className="text-8xl leading-none">Paintings</h2>
@@ -59,13 +59,13 @@ export default function Home() {
         </div>
 
         <div className="col-span-12 col-start-1 mt-8 flex items-center justify-center gap-8">
-          <div className="bg-accent h-1 w-20 rounded-full" />
+          <div className="h-1 w-20 rounded-full bg-accent" />
           <div className="h-1 w-20 rounded-full bg-white" />
           <div className="h-1 w-20 rounded-full bg-white" />
         </div>
       </section>
 
-      <section className="text-primary layout-grid space-y-16 bg-white p-24">
+      <section className="layout-grid space-y-16 bg-white p-24 text-primary">
         <h2 className="col-span-12 text-center font-serif text-8xl leading-none">
           Lectures
         </h2>
@@ -83,7 +83,7 @@ export default function Home() {
                 { date: "26", name: "Emily Wilson", time: "13:05 - 14:05" },
               ].map(({ date, name, time }, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="bg-primary h-full w-px" />
+                  <div className="h-full w-px bg-primary" />
                   <p className="text-4xl">{date}</p>
                   <div className="font-sans text-xs">
                     <p className="font-semibold">{name}</p>
@@ -93,7 +93,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="bg-primary h-px w-full" />
+            <div className="h-px w-full bg-primary" />
 
             <div className="flex justify-evenly">
               {[
@@ -102,7 +102,7 @@ export default function Home() {
                 { date: "29", name: "Gregory Nagy", time: "13:50 - 14:50" },
               ].map(({ date, name, time }, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="bg-primary h-full w-px" />
+                  <div className="h-full w-px bg-primary" />
                   <p className="text-4xl">{date}</p>
                   <div className="font-sans text-xs">
                     <p className="font-semibold">{name}</p>
@@ -120,6 +120,47 @@ export default function Home() {
         </div>
 
         <Lectures />
+      </section>
+
+      <section className="layout-grid bg-primary p-24 text-white">
+        <h2 className="col-span-12 mb-16 text-center font-serif text-8xl leading-none">
+          Workshops
+        </h2>
+
+        <div className="col-span-4 col-start-2">
+          <h3 className="mb-10 font-serif text-7xl text-accent">
+            Painting Workshop
+          </h3>
+          <div className="mb-6 flex items-center gap-4">
+            <Image
+              src="/workshops/host.jpg"
+              alt="Host"
+              width={80}
+              height={80}
+              className="aspect-square size-12 rounded-full object-cover"
+            />
+            <div>
+              <p className="flex items-center gap-4 font-semibold">
+                <span>13:00 - 17:00</span>
+                <span>25 October 2024</span>
+              </p>
+              <p>Konstantinos Papamichalopoulos</p>
+            </div>
+          </div>
+          <p>
+            Develop a greater appreciation for Greek art by recreating and
+            copying Greek artwork using acrylics, watercolor color pastels,
+            color pencils and more.
+          </p>
+        </div>
+
+        <Image
+          src="/workshops/painting.jpg"
+          alt="Painting Workshop"
+          width={600}
+          height={600}
+          className="col-span-5 col-start-7 aspect-square rounded-md object-cover"
+        />
       </section>
     </>
   )
