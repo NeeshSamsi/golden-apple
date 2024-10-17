@@ -3,6 +3,7 @@ import hero1 from "@/../public/hero/hero-1.jpg"
 import hero2 from "@/../public/hero/hero-2.jpg"
 import paintings from "@/../public/carousel/paintings.jpg"
 import Lectures from "@/components/Lectures"
+import HistorySection from "@/components/HistorySection"
 
 export default function Home() {
   return (
@@ -162,6 +163,8 @@ export default function Home() {
           className="col-span-5 col-start-7 aspect-square rounded-md object-cover"
         />
       </section>
+
+     <HistorySection></HistorySection>
     </>
   )
 }

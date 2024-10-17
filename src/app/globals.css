@@ -5,3 +5,20 @@
 .layout-grid {
   @apply grid grid-cols-12 gap-6;
 }
+
+.sticky-heading {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  height: 500px;
+  font-size: 14rem;
+}
+
+.fade-enter {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
